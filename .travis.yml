@@ -7,9 +7,6 @@ services:
 before_install:
   - docker build -t jeonghanchoi/docker-react -f Dockerfile .
 
-script:
-  - docker run -e CI=true jeonghanchoi/docker-react npm run test -- --coverage
-
 deploy:
   provider: elasticbeanstalk
   region: "ap-northeast-2"

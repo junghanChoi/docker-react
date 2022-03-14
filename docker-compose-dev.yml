@@ -1,0 +1,19 @@
+version: '3' #indentation에 주의하자
+services:
+  web: #host dev server
+    build:
+      context: .
+      dockerfile: Dockerfile.dev 
+    ports:
+      - "3000:3000"
+    volumes: #여러개 입력해도 되는구먼
+      - /app/node_modules
+      - .:/app
+  tests: #check test
+    build:
+      context: .
+      dockerfile: Dockerfile.dev 
+    volumes: #여러개 입력해도 되는구먼
+      - /app/node_modules
+      - .:/app
+    command: ["npm", "run", "test"]

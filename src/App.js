@@ -8,7 +8,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h1 className="App-title">Welcome to react</h1>
       </header>
-      <p className='App-intro'>I've changed</p>
+      <p className='App-intro'>Deployed</p>
     </div>
   );
 }
